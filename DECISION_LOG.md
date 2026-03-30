@@ -277,3 +277,14 @@ Each entry must follow:
 - **STATUS:** COMPLETE
 
 ---
+
+## CHANGE: TASK-023 — UI Engine Core Implementation
+
+- **TYPE:** CHANGE
+- **SOURCE:** TASK-023
+- **DESCRIPTION:** Implemented minimal UI Engine core in apps/web/src/ui-engine/. Created registry.ts (WidgetRegistry singleton, all type definitions, UNKNOWN_WIDGET fallback, forPlatform filter), subscriptionPool.ts (SubscriptionPool singleton, reference-counted acquire/release, lastData cache for late-joining widgets, destroyAll), engine.ts (UIEngine singleton, configure/registerSourceOpener/mount/unmount/unmountAll/getState/getContext/debugSummary). Created dev-only /engine-test page exercising full lifecycle: 3 widget definitions registered, mock ticker source firing every 2s, deduplication confirmed (test_ticker_0 + test_shared_0 share one interval via pool), emit/unmount buttons, debug panels. TypeScript: zero errors. Existing dashboard untouched.
+- **REASON:** Phase 4B requires a working engine before dashboard.tsx can be refactored. This commit establishes the engine in isolation so it can be validated before any migration.
+- **IMPACT:** UIEngine, WidgetRegistry, SubscriptionPool are importable from @/ui-engine/*. Deduplication and lifecycle management are proven working. Next step: register real QRVEE widget definitions and migrate dashboard.tsx to use the engine.
+- **STATUS:** COMPLETE
+
+---
