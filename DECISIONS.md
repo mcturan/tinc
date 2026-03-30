@@ -1,0 +1,1 @@
+Event-based system, no direct API, offline-first, QRVEE not core

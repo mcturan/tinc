@@ -1,0 +1,1 @@
+TINC is core system. Apps (qrvee, pnot, minwin) consume it.

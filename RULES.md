@@ -1,0 +1,1 @@
+Stability first, no overengineering, log decisions, AI controlled

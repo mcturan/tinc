@@ -1,0 +1,1 @@
+Detailed architecture: TINC core + independent apps + Firebase event bus

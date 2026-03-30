@@ -1,0 +1,1 @@
+Duplicate events, scaling, wrong core selection, offline break risk
