@@ -244,3 +244,14 @@ Each entry must follow:
 - **STATUS:** COMPLETE
 
 ---
+
+## CHANGE: TASK-020 — GitHub Repo Sync + README Standardization
+
+- **TYPE:** CHANGE
+- **SOURCE:** TASK-020
+- **DESCRIPTION:** Audited and synced all 4 GitHub repos. qrvee: merged remote diverged commit (qrvee_landing.md) and pushed 8 local commits (TASK-009 through TASK-019). tinc: initialized git in workspace/tinc, updated README from stub to full architecture description, expanded ROLES.md, committed all 29 files (including RUN_LOG TASK-009 through TASK-019, DECISION_LOG, EVENT_SYSTEM_V2, AUDIT_REPORT, EVENT_FLOW_REPORT), force-pushed to GitHub. pnot: cloned, added README with TINC event consumer relation and status table. minwin: updated README from one-line stub to full vision, TINC relation, and status table.
+- **REASON:** workspace/tinc had no git — 11 tasks of architecture decisions, RUN_LOGs, and event system docs existed only locally. qrvee was 8 commits behind GitHub. pnot had no README; minwin had a stub README.
+- **IMPACT:** All 4 repos are now synced and documented. workspace/tinc is now a tracked git repo. No local data was lost.
+- **STATUS:** COMPLETE
+
+---
