@@ -288,3 +288,14 @@ Each entry must follow:
 - **STATUS:** COMPLETE
 
 ---
+
+## CHANGE: TASK-024 — UI Engine Hardening
+
+- **TYPE:** CHANGE
+- **SOURCE:** TASK-024
+- **DESCRIPTION:** Added LifecycleState ('MOUNT'|'ACTIVE'|'HIDDEN'|'ERROR'|'UNMOUNT') to WidgetState. Rewrote engine.ts with full state machine: hide() releases pool subscriptions (ACTIVE→HIDDEN), show() re-acquires them (HIDDEN→ACTIVE), setError() transitions to ERROR and releases subscriptions, recover() re-opens subscriptions (ERROR→MOUNT). Created WidgetErrorBoundary.tsx (React class component, calls UIEngine.setError on componentDidCatch, Retry calls UIEngine.recover). Created useWidgetState.ts (per-widget hook filtering engine state changes) and useAllWidgetStates() (full map for shell/debug). Extended engine-test page with crash simulation, hide/show buttons, rapid event test, lifecycle badge column, full debug table. TypeScript: zero errors.
+- **REASON:** TASK-023 engine had no lifecycle states, no visibility control, no error isolation, and no React integration layer — not production-ready.
+- **IMPACT:** Engine is now production-ready for Phase 4B dashboard migration. Error boundaries prevent widget crashes from cascading. Visibility control enables resource savings when widgets are hidden. useWidgetState hook is the React integration point for all future widget components.
+- **STATUS:** COMPLETE
+
+---
