@@ -266,3 +266,14 @@ Each entry must follow:
 - **STATUS:** COMPLETE
 
 ---
+
+## DECISION: TASK-022 — UI Runtime Engine Design
+
+- **TYPE:** DECISION
+- **SOURCE:** TASK-022
+- **DESCRIPTION:** Designed the UI runtime engine. Created UI_ENGINE.md defining: engine's 3 responsibilities (lifecycle management, data distribution, render orchestration); 5 execution flow scenarios (app load, widget show/hide, real-time update, interaction→shell); WidgetRegistry as immutable Map with unknown-type safety and platform/Pro filtering; render loop with 16ms batching, priority tiers, skeleton→content transitions, per-widget error boundaries; 4-level isolation model (data/state/error/events); full UIEngine TypeScript interface; reference-counted SubscriptionPool for deduplication. Gap analysis against current dashboard.tsx: no registry Map, no dedup, no error boundaries, no typed events, lifecycle scattered in 499-line monolith.
+- **REASON:** UI_PLATFORM.md (TASK-021) defined the platform contracts. TASK-022 defines the runtime that executes those contracts — required before Phase 4B implementation can begin.
+- **IMPACT:** Phase 4B (dashboard.tsx refactor) has a clear spec. Engine API is the implementation target. Subscription dedup eliminates N duplicate Firestore listeners. Error boundaries prevent widget crashes from killing the full dashboard.
+- **STATUS:** COMPLETE
+
+---
