@@ -255,3 +255,14 @@ Each entry must follow:
 - **STATUS:** COMPLETE
 
 ---
+
+## DECISION: TASK-021 — UI Platform Architecture
+
+- **TYPE:** DECISION
+- **SOURCE:** TASK-021
+- **DESCRIPTION:** Designed the modular UI platform for all QRV ecosystem apps. Created UI_PLATFORM.md defining: Dashboard/Widget/Layout/DataSource core concepts; WidgetDefinition (static registry) + WidgetInstance (per-user config) separation; WidgetContract interface (initialize/onData/render/onInteraction/destroy); WidgetContext injection model; 3-layer state architecture (Firestore → Zustand → React); event-driven update flow via TINC event system; 7 modularity rules (one-definition-many-instances, no cross-widget imports, declarative data source, platform isolation, config schema required, declarative Pro gating, central catalog). Catalogued 17 existing QRVEE widget types. Defined cross-app extension points for PNOT and MINWIN using same DashboardConfig types from @qrvee/shared.
+- **REASON:** Phase 4 requires a shared UI system. Without a formal widget contract, each new tile adds bespoke logic to a 499-line monolith (dashboard.tsx) and mobile has no parity model.
+- **IMPACT:** All future widget development follows the WidgetDefinition + WidgetContract model. PNOT and MINWIN can scaffold dashboards using the same @qrvee/shared types and Firestore path pattern. Implementation phases: 4B (refactor web dashboard), 4C (extract hooks), 4D (PNOT scaffold), 4E (mobile parity).
+- **STATUS:** COMPLETE
+
+---
