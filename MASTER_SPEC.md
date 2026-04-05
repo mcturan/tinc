@@ -202,3 +202,52 @@ Agent roles: AGENT_PROTOCOL.md
 
 Any deviation from this spec = REJECT.
 Full triggers: ENFORCEMENT.md
+
+---
+
+## RIGCONNECT SYSTEM
+
+The RigConnect system bridges physical amateur radio hardware to the QRVEE platform.
+
+**Scope:** Client-side only. No cross-app events in V1.
+
+**Components (implemented, approved FAZ-04):**
+- `lib/rig/protocol.ts` — Universal Rig Protocol (Yaesu, Icom, Kenwood, ESP32 bridge)
+- `lib/rig/yaesu897.ts` — Yaesu FT-897D CAT implementation (4800 baud, BCD frequency)
+- `lib/modem/afsk.ts` — Bell 202 AFSK encoder, NRZI encoding, AudioBuffer output
+- `lib/modem/ax25.ts` — AX.25 UI Frame packetizer, CRC-16-CCITT, bit stuffing (APRS)
+- `components/sdr/SDRWaterfall.tsx` — Canvas 60fps waterfall, Web Audio AnalyserNode
+
+**Rules:**
+- RigConnect reads rig state and writes to local store (useRadioStore)
+- CAT commands fire locally — no Firestore writes from CAT layer
+- APRS position → session.started event (allowed — this is QRVEE data)
+- SDR data → display only, not persisted
+- No direct PNOT/OPS calls from RigConnect layer (LAW-005)
+
+**RF NETWORK Integration (FAZ 9+):**
+AFSK + AX.25 stack will feed events_rfnetwork collection when RF NETWORK phase begins.
+
+---
+
+## YLRL GRANT SYSTEM
+
+**Status:** Implemented, approved FAZ-04
+**File:** app/ylrl/page.tsx
+
+YLRL (Young Ladies Radio League) üyelik grant formu.
+Cloud Function: submitGrant
+Community feature — amatör telsiz topluluğunun kadın operatörlerini destekler.
+Marketing değeri yüksek — FAZ 8 landing page'de öne çıkarılacak.
+
+---
+
+## KIOSK MODE
+
+**Status:** Implemented, approved FAZ-04
+**File:** app/dashboard/kiosk/page.tsx
+
+Full-screen shack display modu.
+Wake Lock API — ekran kapanmaz.
+Tek ekrandan tüm shack durumu izlenebilir.
+Digital shack konseptiyle örtüşüyor.
