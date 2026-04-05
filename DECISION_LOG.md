@@ -347,3 +347,40 @@ Each entry must follow:
   useGameStore zaten hazır — üzerine inşa edilecek.
 - **STATUS:** COMPLETE
 
+
+---
+
+## DECISION: FAZ-04-001 — PNOT Standalone Geçiş Başlatıldı
+
+- **TYPE:** CHANGE
+- **DATE:** 2026-04-06
+- **DESCRIPTION:** PNOT'un kendi Firebase Functions altyapısı oluşturuldu.
+  pnot repo içinde firebase/functions/src/ yapısı kuruldu.
+  Types, handler (qrveeEvents.ts), index.ts yazıldı.
+  NOT: PNOT'un mevcut index.ts zaten tam dolu (invite, XP, classroom, trial, webhook CF'ları).
+  Yeni TINC event consumer handler'ları ayrı dosyaya (events/handlers/qrveeEvents.ts) eklendi.
+  handlePnot hala qrvee'de — tam geçiş FAZ-05'te tamamlanacak.
+- **STATUS:** COMPLETE (geçiş devam ediyor)
+
+---
+
+## DECISION: FAZ-04-002 — RigConnect Resmi Özellik
+
+- **TYPE:** DECISION
+- **DATE:** 2026-04-06
+- **DESCRIPTION:** lib/modem/afsk.ts, ax25.ts, lib/rig/protocol.ts, yaesu897.ts,
+  components/sdr/SDRWaterfall.tsx — spec dışı başlamış dosyalar onaylandı.
+  MASTER_SPEC'e RigConnect bölümü eklendi. RF NETWORK FAZ 9+ ile entegre edilecek.
+- **STATUS:** COMPLETE
+
+---
+
+## DECISION: FAZ-04-003 — UIEngine Ertelendi
+
+- **TYPE:** DECISION
+- **DATE:** 2026-04-06
+- **DESCRIPTION:** Tam UIEngine refaktoru ertelendi. Dashboard 499 satır,
+  temiz yapıda, çalışıyor. WidgetErrorBoundary eklenerek minimum güvenlik sağlandı.
+  Tam UIEngine: PNOT/OPS cross-app widget ihtiyacı doğduğunda yapılacak.
+- **STATUS:** COMPLETE
+
