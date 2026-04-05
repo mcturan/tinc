@@ -308,3 +308,16 @@ Each entry must follow:
 - **SOURCE:** ChatGPT konuşma extraction
 - **DESCRIPTION:** Ekosistem ana domain'i olarak tinc.ee kararlaştırılmış.
 - **STATUS:** CONFIRMED — implementasyon FAZ 8'de
+
+---
+
+## DECISION: FAZ-01-KEŞIF — Mevcut Servisler Tespit Edildi
+
+- **TYPE:** SNAPSHOT
+- **DATE:** 2026-04-06
+- **DESCRIPTION:** Yeni PC'de mevcut çalışan servisler tespit edildi:
+  n8n (5678), Memos (5230), Immich (2283).
+  Memos = self-hosted not uygulaması. PNOT için FAZ 4'te değerlendirilecek:
+  sıfırdan yazmak yerine Memos'u TINC event sistemine bağlama seçeneği.
+  Immich = fotoğraf yönetimi. Cloudinary alternatifi olarak FAZ 5+'da değerlendirilir.
+- **STATUS:** NOTED
