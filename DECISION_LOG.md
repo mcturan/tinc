@@ -299,3 +299,12 @@ Each entry must follow:
 - **STATUS:** COMPLETE
 
 ---
+
+---
+
+## DECISION: CHATGPT-MERGE-001 — Domain Kararı
+
+- **TYPE:** DECISION
+- **SOURCE:** ChatGPT konuşma extraction
+- **DESCRIPTION:** Ekosistem ana domain'i olarak tinc.ee kararlaştırılmış.
+- **STATUS:** CONFIRMED — implementasyon FAZ 8'de
