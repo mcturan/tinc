@@ -321,3 +321,29 @@ Each entry must follow:
   sıfırdan yazmak yerine Memos'u TINC event sistemine bağlama seçeneği.
   Immich = fotoğraf yönetimi. Cloudinary alternatifi olarak FAZ 5+'da değerlendirilir.
 - **STATUS:** NOTED
+
+---
+
+## SNAPSHOT: FAZ-02 — QRVEE İç Yapı Denetimi
+
+- **TYPE:** SNAPSHOT
+- **DATE:** 2026-04-06
+- **DESCRIPTION:** QRVEE reposunun tam iç denetimi yapıldı. Kritik bulgular:
+  1. UIEngine (WidgetRegistry, SubscriptionPool, LifecycleState): TINC ZIP'teki 
+     DECISION_LOG'da TASK-023/024 tamamlandı denmesine rağmen QRVEE repo'sunda 
+     KOD YOK. Büyük ihtimalle eski PC'de local kalmış, push edilmemiş.
+  2. Game System (FlowWidget, RF oyunları, XP/Level/Badge/Quest/Ghost/Challenge): 
+     Aynı durum. Spec var, kod yok. NOT: useGameStore XP/Level/Mood/Streak sistemi
+     TAM implement edilmiş ve çalışıyor.
+  3. pnot-client.ts: Direkt API çağrısı yapıyor. LAW-005 ihlali. FAZ-03'te 
+     devre dışı bırakıldı.
+  4. Spec dışı başlangıçlar: modem/afsk.ts (tam APRS encoder), modem/ax25.ts, 
+     rig/yaesu897.ts (ESP32 CAT bridge), SDRWaterfall.tsx — Müteahhit kararı bekliyor.
+  5. YLRL sayfası ve kiosk modu: Spec'te yok.
+  6. Event system, auth, offline stack: SAĞLIKLI.
+  7. Dashboard: 499 satır (1200+ değil) — tile'lar inline ama yönetilebilir.
+- **IMPACT:** UIEngine ve flow engine sıfırdan implement edilecek. 
+  Spec dosyaları (TINC ZIP) mevcut — kodlar ondan yazılacak.
+  useGameStore zaten hazır — üzerine inşa edilecek.
+- **STATUS:** COMPLETE
+
