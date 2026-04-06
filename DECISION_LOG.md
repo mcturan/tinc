@@ -420,3 +420,21 @@ Each entry must follow:
   LAW-007: Tüm timestamp'ler server-side Timestamp.now().
   TypeScript: sıfır hata.
 - **STATUS:** COMPLETE (Phase 1 — Party/Account CRUD ve FIN UI FAZ-07'de)
+
+---
+
+## CHANGE: FAZ-07 — MINWIN MVP
+
+- **TYPE:** CHANGE
+- **DATE:** 2026-04-06
+- **DESCRIPTION:** MINWIN reverse auction engine implement edildi.
+  Koleksiyonlar: minwin_auctions, minwin_offers, events_minwin.
+  Cloud Functions: createAuction, submitOffer, acceptOffer.
+  AuctionValidator: validateNewAuction, validateNewOffer, canAcceptOffer (pure, Codex yazdı).
+  TINC event entegrasyonu: auction.created, offer.submitted, offer.accepted events_minwin'e yazılır.
+  LAW-005: Tüm cross-app iletişim events_minwin üzerinden.
+  LAW-007: serverTime — Timestamp.now() kullanılır.
+  LAW-015: Hiçbir şey auto-trigger değil, kullanıcı aksiyonu zorunlu.
+  Eksik (ileride): expiry scheduler, UI, QRVEE reputasyon entegrasyonu.
+  TypeScript: sıfır hata.
+- **STATUS:** COMPLETE (MVP)
