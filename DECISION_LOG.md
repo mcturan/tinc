@@ -438,3 +438,29 @@ Each entry must follow:
   Eksik (ileride): expiry scheduler, UI, QRVEE reputasyon entegrasyonu.
   TypeScript: sıfır hata.
 - **STATUS:** COMPLETE (MVP)
+
+---
+
+## CHANGE: FAZ-08A — PNOT Tam Geçiş
+
+- **TYPE:** CHANGE
+- **DATE:** 2026-04-06
+- **DESCRIPTION:** handlePnot qrvee'den PNOT standalone'a taşındı.
+  Yeni PNOT CF'leri: processPnotEvent (4 event tipi), getPnotNotes.
+  qrvee/handlePnot devre dışı bırakıldı (DEPRECATED).
+  Session.started, session.ended, qso.logged, broadcast.sent tam implement.
+  Deduplication: sourceEventId kontrolü aktif.
+  LAW-005: PNOT artık kendi CF'lerinde, qrvee'ye direkt bağımlılık yok.
+- **STATUS:** COMPLETE
+
+---
+
+## CHANGE: FAZ-08B — OPS FIN Phase 2
+
+- **TYPE:** CHANGE
+- **DATE:** 2026-04-06
+- **DESCRIPTION:** OPS Party ve Account CRUD eklendi.
+  createParty, listParties: ops_parties koleksiyonu.
+  createAccount, getAccountBalance: ops_accounts + LAW-013 (balance türetilmiş).
+  OPS artık tam CRUD'a sahip: Case + Transaction + Ledger + Party + Account.
+- **STATUS:** COMPLETE
