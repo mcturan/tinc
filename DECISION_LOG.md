@@ -400,3 +400,23 @@ Each entry must follow:
   RF Propagation ve RF World: placeholder — FAZ-06'da implement edilecek.
   TypeScript: sıfır hata.
 - **STATUS:** COMPLETE (Phase 1)
+
+---
+
+## CHANGE: FAZ-06 — OPS Core FIN Phase 1
+
+- **TYPE:** CHANGE
+- **DATE:** 2026-04-06
+- **DESCRIPTION:** OPS FIN Phase 1 implement edildi.
+  Oluşturulan: ops/firebase/functions/src/ altında
+  types.ts (Party, Account, Case, Transaction, LedgerEntry, Document, OpsEvent),
+  CalculationEngine.ts (calculateFees, buildTransferLedger, validateLedger, calculateAccountBalance),
+  fin/handlers/caseHandler.ts (createCase CF),
+  fin/handlers/transferHandler.ts (createTransfer CF — batch write, LAW-001 doğrulama).
+  Firestore koleksiyonları: ops_cases, ops_transactions, ops_ledger.
+  LAW-001: buildTransferLedger her çalışmada validateLedger ile SUM==0 doğrular.
+  LAW-004: CalculationEngine pure functions, deterministik.
+  LAW-006: Ledger entry'ler Firestore'a set() ile yazılır — update() yasak.
+  LAW-007: Tüm timestamp'ler server-side Timestamp.now().
+  TypeScript: sıfır hata.
+- **STATUS:** COMPLETE (Phase 1 — Party/Account CRUD ve FIN UI FAZ-07'de)
