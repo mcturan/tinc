@@ -503,3 +503,20 @@ Each entry must follow:
   Sonraki adım: Müteahhit Stitch'te UI üretir → Claude Pro FINAL onayı verir.
 - **STATUS:** DRAFT — Stitch çıktısı bekleniyor
 
+
+---
+
+## DECISION: MASKOT-001 — Platform Maskotu ve İsim Kararı
+
+- **TYPE:** DECISION
+- **DATE:** 2026-04-07
+- **DESCRIPTION:** QRVEE platform maskotu ve olası isim değişikliği kararlaştırıldı.
+  Maskot: WAVL — antropomorfik baykuş, iki ayak üzerinde, kulaklıklı,
+  Zootopia stilinde insani kişilik.
+  İsim anlamı: Wave (radyo dalgası) + Owl (baykuş).
+  Gerekçe: 270° kafa dönüşü = omnidirectional anten, gece kuşu = DX yayılımı,
+  zeka sembolü = Intelligence Hub konsepti.
+  Platform isim değişikliği (QRVEE → WAVL veya türevi) FAZ-10'da ele alınacak.
+  Fox/FOXR adayı tamamen reddedildi.
+- **STATUS:** CONFIRMED — FAZ-10'da implement edilecek
+
