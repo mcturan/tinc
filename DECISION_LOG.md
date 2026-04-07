@@ -464,3 +464,42 @@ Each entry must follow:
   createAccount, getAccountBalance: ops_accounts + LAW-013 (balance türetilmiş).
   OPS artık tam CRUD'a sahip: Case + Transaction + Ledger + Party + Account.
 - **STATUS:** COMPLETE
+
+---
+
+## CHANGE: FAZ-09A — MINWIN Expiry Scheduler
+
+- **TYPE:** CHANGE
+- **DATE:** 2026-04-07
+- **DESCRIPTION:** checkExpiredAuctions scheduled CF eklendi (her 10 dakika).
+  Süresi dolmuş open auction'lar → expired yapılır.
+  Pending teklifler → rejected yapılır.
+  TINC event: auction.expired → events_minwin.
+  LAW-005, LAW-006, LAW-015 uyumlu.
+- **STATUS:** COMPLETE
+
+---
+
+## CHANGE: FAZ-09B — OPS FIN Minimal UI
+
+- **TYPE:** CHANGE
+- **DATE:** 2026-04-07
+- **DESCRIPTION:** OPS FIN web uygulaması kuruldu (Next.js 14, port 3001).
+  Sayfalar: Dashboard, Parties (CRUD), Cases (CRUD), Accounts (bakiye sorgu).
+  Tasarım minimal/fonksiyonel — Stitch+Gemini ile yeniden tasarlanacak (FAZ-10+).
+  LAW-017: Tasarım kararı verilmedi, sadece çalışan CRUD implement edildi.
+- **STATUS:** COMPLETE
+
+---
+
+## DECISION: FAZ-09C — Landing Page DesignSpec DRAFT
+
+- **TYPE:** DECISION
+- **DATE:** 2026-04-07
+- **DESCRIPTION:** Landing page DesignSpec DRAFT oluşturuldu.
+  qrvee/DESIGN_SPECS/landing-page.md — Design Tokens, Motion, Anti-patterns, Stitch Prompt.
+  Stitch prompt hazırlandı: /home/turan/İndirilenler/STITCH_PROMPT.txt
+  LAW-016: DesignSpec FINAL onayı olmadan Codex implement etmez.
+  Sonraki adım: Müteahhit Stitch'te UI üretir → Claude Pro FINAL onayı verir.
+- **STATUS:** DRAFT — Stitch çıktısı bekleniyor
+
