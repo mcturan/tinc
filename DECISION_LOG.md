@@ -520,3 +520,34 @@ Each entry must follow:
   Fox/FOXR adayı tamamen reddedildi.
 - **STATUS:** CONFIRMED — FAZ-10'da implement edilecek
 
+
+---
+
+## DECISION: MASKOT-002 — WAVLEE Karakter Tasarımı Kesinleşti
+
+- **TYPE:** DECISION
+- **DATE:** 2026-04-07
+- **DESCRIPTION:** Platform maskotu WAVLEE olarak kesinleşti.
+  Domain: wavl.ee (platform yeniden adlandırma FAZ-10'da)
+  Karakter: Robot baykuş — Wall-E filmindeki EVA karakteri referans alınacak.
+  Büyük yuvarlak gözler, metalik/beyaz gövde, kanatlar değil yüzen/levitating.
+  Yüzer durumda — ayak yok, zemine temas yok.
+  Hareket: Öne eğilip süzülerek ilerler, kendi etrafında döner, glide eder.
+  Oyunlarda: Koşmak yerine süzülme/glide mekanizması.
+  Ses: Elektronik baykuş sesi (hoot + synthesizer blend).
+  QRVEE içindeki RF ♂ ve ANT ♀ karakterleri WAVLEE ile aynı evrende yaşar.
+  WAVLEE = platform maskotu (dış yüz), RF+ANT = uygulama içi asistanlar.
+- **STATUS:** CONFIRMED
+
+---
+
+## DECISION: DOMAIN-001 — wavl.ee Domain Kararı
+
+- **TYPE:** DECISION  
+- **DATE:** 2026-04-07
+- **DESCRIPTION:** Platform ana domain'i wavl.ee olarak kararlaştırıldı.
+  tinc.ee ecosystem domain olarak kalabilir.
+  QRVEE → WAVL yeniden adlandırma FAZ-10'da tüm kod referanslarıyla yapılacak.
+  Mevcut app.qrv.ee geçiş döneminde çalışmaya devam edecek.
+- **STATUS:** CONFIRMED — FAZ-10'da implement
+
