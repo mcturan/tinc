@@ -551,3 +551,20 @@ Each entry must follow:
   Mevcut app.qrv.ee geçiş döneminde çalışmaya devam edecek.
 - **STATUS:** CONFIRMED — FAZ-10'da implement
 
+
+---
+
+## CHANGE: FAZ-10 — WAVL Landing Page
+
+- **TYPE:** CHANGE
+- **DATE:** 2026-04-11
+- **DESCRIPTION:** WAVL landing page implement edildi.
+  Gemini CLI ile tam HTML/CSS/JS üretildi (38.924 byte).
+  Codex ile Next.js component'larına dönüştürüldü.
+  Bölümler: Nav, Hero (WAVLEE SVG), AccordionBanner, Stats,
+  7x FeatureSection, SocialProof, HowItWorks, BottomCTA, Footer.
+  LAW-017: Tüm tasarım kararları Gemini'a ait.
+  WAVLEE: EVA robot baykuş, float animasyonu, cyan visor gözler.
+  Domain kararı: wavl.ee (platform rename FAZ-11'de)
+- **STATUS:** COMPLETE (görsel polish ve gerçek fotoğraflar sonraki iterasyonda)
+
