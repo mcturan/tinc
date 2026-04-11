@@ -77,3 +77,13 @@ echo "PRECHECK PASSED"
 # ══════════════════════════════════════════════════════════════
 # ZORUNLU OKUMA SONU — Şimdi asıl göreve geç
 # ══════════════════════════════════════════════════════════════
+
+## KRİTİK KURAL — FALLBACK YASAĞI
+
+Claude Code asla kendi başına "Codex/Gemini cevap vermedi, ben yapayım" kararı alamaz.
+Codex veya Gemini bir görevi tamamlamazsa:
+1. DUR
+2. Rapor dosyasına yaz: "GÖREV-X: Codex/Gemini tamamlamadı — Müteahhit kararı gerekiyor"
+3. Bekle
+
+Bu kural ihlal edilemez. İhlal = görevi bırak, rapor yaz.
