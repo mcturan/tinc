@@ -583,3 +583,20 @@ Each entry must follow:
   Favicon: DESIGN_SPECS/logo/wavl-favicon.svg (608 byte)
 - **STATUS:** COMPLETE — Müteahhit onayı bekleniyor
 
+
+---
+
+## CHANGE: FAZ-10E — WAVL Landing Final
+
+- **TYPE:** CHANGE
+- **DATE:** 2026-04-13
+- **DESCRIPTION:** Landing page son hali. Gemini tam yetki.
+  Yeni: Canvas waterfall (fare etkilesimi, 80 kolon), bento grid hero (2x2 kart, 3D tilt),
+  sticky scroll narrative (4 state), 'Neden ham radio 2026' bolumu,
+  Web Audio API morse ses efekti easter egg (RIT pattern),
+  feature table click-to-expand, MinWin aciklamasi duzeltildi,
+  canli operator sayaci (847 drift), bento grid ozellik vitrin,
+  noise grain overlay, scroll reveal animasyonlari.
+  Dosya: DESIGN_SPECS/landing-final/landing-final.html (83.016 byte)
+- **STATUS:** COMPLETE — Muteahhit onay bekleniyor
+
