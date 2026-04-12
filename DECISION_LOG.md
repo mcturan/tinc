@@ -568,3 +568,18 @@ Each entry must follow:
   Domain kararı: wavl.ee (platform rename FAZ-11'de)
 - **STATUS:** COMPLETE (görsel polish ve gerçek fotoğraflar sonraki iterasyonda)
 
+
+---
+
+## CHANGE: FAZ-10C — Logo + Landing v3
+
+- **TYPE:** CHANGE
+- **DATE:** 2026-04-12
+- **DESCRIPTION:** WAVL logo üretildi (dalga=baykuş gözleri, SVG, monokrom, #f97316 orange).
+  landing-gemini-v3: SDR waterfall arka plan (60 kolon CSS animasyonu), feature accordion list (24 özellik),
+  tagline'lar eklendi ('Every operator. Every band. One platform.' + 'Go QRV smarter.'),
+  sahte rakamlar kaldırıldı, ticker kaldırıldı, logo nav'a eklendi.
+  Logo: DESIGN_SPECS/logo/wavl-logo.svg (1074 byte)
+  Favicon: DESIGN_SPECS/logo/wavl-favicon.svg (608 byte)
+- **STATUS:** COMPLETE — Müteahhit onayı bekleniyor
+
