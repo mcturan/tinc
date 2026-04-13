@@ -600,3 +600,22 @@ Each entry must follow:
   Dosya: DESIGN_SPECS/landing-final/landing-final.html (83.016 byte)
 - **STATUS:** COMPLETE — Muteahhit onay bekleniyor
 
+
+---
+
+## CHANGE: FAZ-11 — Platform Rename + Vercel
+
+- **TYPE:** CHANGE
+- **DATE:** 2026-04-13
+- **DESCRIPTION:** 
+  Landing: "Why radio in 2026" bolumu eklendi. 3 sosyal kanit karti eklendi (VK/DL/JA).
+  Badge: "Mission Critical AI OS" -> "Live Network Active" (Gemini zaten degistirmis).
+  Rename: package.json (wavl-web), 27 src dosyasi QRVEE->WAVL display metni.
+  manifest.json: name/short_name WAVL.
+  Vercel: vercel.json olusturuldu (region cdg1, security headers).
+  Env: .env.example guncellendi (STRIPE_ELITE_PRICE_ID dahil).
+  Firebase proje ID (qrvee-project) degismez.
+  Repo adi (qrvee/) degismez.
+- **STATUS:** COMPLETE
+- **NEXT:** Vercel deploy (vercel --prod), wavl.ee DNS, Stripe Elite fiyat ID
+
