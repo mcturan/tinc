@@ -710,3 +710,18 @@ Each entry must follow:
 
 - **STATUS:** COMPLETE
 
+
+---
+
+## CHANGE: FAZ-14 — Dashboard Showcase + Logo
+
+- **TYPE:** CHANGE
+- **DATE:** 2026-04-13
+- **DESCRIPTION:** Dashboard showcase section eklendi (Gemini).
+  Home Assistant benzeri widget grid — WAVLEE AI, Live Map, Band Conditions,
+  League, RigConnect, QSO Log, MinWin Alert, Space Weather.
+  DALL-E 3 logo seçeneği üretildi (A: dalga baykuş, B: W harfi baykuş, C: sinyal baykuş).
+  Müteahhit logo seçimini yapacak → seçilen nav'a işlenecek.
+  landing-final.html: 107613 byte.
+- **STATUS:** Müteahhit logo onayı bekleniyor
+
