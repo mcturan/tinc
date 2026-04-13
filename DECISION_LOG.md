@@ -743,3 +743,19 @@ Each entry must follow:
   FAZ-16: BUILD OK, DEPLOY BEKLIYOR (vercel login gerekiyor)
   FAZ-17: BEKLIYOR — Codex başarısız, Müteahhit kararı gerekiyor
 
+
+---
+
+## CHANGE: FAZ-17 — Stripe Webhook (Codex tamamladı)
+
+- **TYPE:** CHANGE
+- **DATE:** 2026-04-13
+- **DESCRIPTION:** Codex gecikmeli tamamladı.
+  stripeWebhook.ts: 281 satır — checkout.session.completed, subscription.deleted,
+  subscription.updated, invoice.payment_failed olayları.
+  createCheckoutSession.ts: 126 satır — onCall CF, Pro/Elite session oluşturur.
+  TypeScript check: 1 deprecation uyarısı (tsconfig ignoreDeprecations), hata yok.
+  Commit: 735fdb6
+- **STATUS:** COMPLETE
+- **NEXT:** Stripe dashboard → Pro+Elite plan → price ID'ler → .env.local
+
