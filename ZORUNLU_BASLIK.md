@@ -24,6 +24,7 @@ cat /home/turan/workspace/tinc_team/SEYİR_DEFTERİ.md | head -50
 | Gemini Pro | Spec uyum doğrular PASS/REJECT | Subjektif kalite değerlendirir |
 | Ollama/Aider | Küçük düzeltme, yerel denetim | Mimari karar verir |
 | seyir_guncelle.sh | Faz sonu otonom log | — |
+| Görsel üretim (maskot, illüstrasyon, ikon) | Codex → DALL-E API | — |
 | GitHub Actions | Push sonrası otonom CI | — |
 
 ## TASARIM PIPELINE (LAW-016, LAW-017 — İhlal = DUR)
@@ -87,3 +88,27 @@ Codex veya Gemini bir görevi tamamlamazsa:
 3. Bekle
 
 Bu kural ihlal edilemez. İhlal = görevi bırak, rapor yaz.
+
+## DALL-E KULLANIM KURALLARI (Codex üzerinden)
+
+Codex, DALL-E API'ye erişebilir. Şu görevler için kullanılır:
+
+| Görev | Açıklama |
+|-------|----------|
+| WAVLEE maskot görselleri | Robot baykuş, EVA stili, farklı pozlar |
+| Landing page hero görselleri | Ham radio ekipmanları, anten, shack |
+| Feature section görseli | SDR waterfall, harita, ekipman |
+| Tamagochi/animasyon frame'leri | WAVLEE animasyonu için kareler |
+| UI ikonlar | Telsiz temalı SVG'ye dönüştürülecek referanslar |
+
+**Kural:** DALL-E çıktıları doğrudan production'a gitmez.
+Önce Claude Pro'ya gösterilir, onay sonrası kullanılır.
+
+**Prompt şablonu (Codex kullanır):**
+**WAVLEE için sabit stil parametreleri:**
+- Robot owl, EVA (Wall-E) aesthetic
+- Cyan glowing visor eyes
+- White/silver metallic body
+- Tall slender proportions
+- Levitating (no legs/feet visible)
+- Studio lighting, clean background

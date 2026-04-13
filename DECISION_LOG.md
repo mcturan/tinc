@@ -619,3 +619,17 @@ Each entry must follow:
 - **STATUS:** COMPLETE
 - **NEXT:** Vercel deploy (vercel --prod), wavl.ee DNS, Stripe Elite fiyat ID
 
+---
+
+## DECISION: DALL-E Pipeline Entegrasyonu
+
+- **TYPE:** DECISION
+- **DATE:** 2026-04-13
+- **DESCRIPTION:** Codex'in DALL-E API erişimi olduğu tespit edildi.
+  Pipeline'a görsel üretim ajanı olarak eklendi.
+  Kullanım alanları: WAVLEE maskot (robot baykuş, EVA stili),
+  landing page görselleri (ham radio ekipman, anten, shack),
+  feature section görselleri, tamagochi/animasyon frame'leri.
+  DALL-E çıktıları Claude Pro onayı olmadan production'a gitmez.
+  WAVLEE stil parametreleri ZORUNLU_BASLIK.md'ye eklendi.
+- **STATUS:** ACTIVE — FAZ-12'de maskot üretiminde kullanılacak
