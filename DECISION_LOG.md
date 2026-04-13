@@ -633,3 +633,18 @@ Each entry must follow:
   DALL-E çıktıları Claude Pro onayı olmadan production'a gitmez.
   WAVLEE stil parametreleri ZORUNLU_BASLIK.md'ye eklendi.
 - **STATUS:** ACTIVE — FAZ-12'de maskot üretiminde kullanılacak
+
+---
+
+## CHANGE: FAZ-12 — DALL-E Görseller Landing'e İşlendi
+
+- **TYPE:** CHANGE
+- **DATE:** 2026-04-13
+- **DESCRIPTION:** gpt-image-1 ile 5 gorsel uretildi (accordion: wavlee-ai, live-map,
+  league, minwin, smart-shack). Telsiz temali, premium, dark studio stili.
+  Photo accordion Unsplash URL'leri DALL-E gorselleriyle degistirildi.
+  PNG'ler repo'ya alinmadi (gitignore), DESIGN_SPECS/assets/images/ yerel.
+  model=gpt-image-1, size=1536x1024, quality=high, output=b64_json.
+- **STATUS:** COMPLETE
+- **NEXT:** Cloudinary yukleme (opsiyonel), maskot FAZ-13, Vercel deploy
+
