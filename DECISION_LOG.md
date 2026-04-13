@@ -759,3 +759,20 @@ Each entry must follow:
 - **STATUS:** COMPLETE
 - **NEXT:** Stripe dashboard → Pro+Elite plan → price ID'ler → .env.local
 
+
+---
+
+## CHANGE: FAZ-18 + FAZ-19 — Auth + Dashboard
+
+- **TYPE:** CHANGE
+- **DATE:** 2026-04-14
+- **DESCRIPTION:**
+  FAZ-18: verifyCallsign (hamdb.org API, ITU format), onUserCreate trigger,
+  onboarding page. Codex yazdı.
+  FAZ-19A: getLiveOperators, getSpaceWeather (NOAA), getDashboardData,
+  setOperatorStatus CF'leri. LAW-005 uyumlu. Codex yazdı.
+  FAZ-19B: Dashboard UI ticker, animasyon, band bars. Gemini güncelledi.
+  events/schema.ts: user.created + operator.status event tipleri eklendi.
+- **AGENT:** Codex (FAZ-18, FAZ-19A) + Gemini (FAZ-19B) + Claude Code (commit/rapor)
+- **STATUS:** COMPLETE — TypeScript sıfır hata, 3 commit push edildi
+
