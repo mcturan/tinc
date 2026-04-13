@@ -648,3 +648,38 @@ Each entry must follow:
 - **STATUS:** COMPLETE
 - **NEXT:** Cloudinary yukleme (opsiyonel), maskot FAZ-13, Vercel deploy
 
+
+---
+
+## DECISION: WAVL MCP Server Mimarisi — Gelecek Planı
+
+- **TYPE:** DECISION
+- **DATE:** 2026-04-13
+- **DESCRIPTION:** WebMCP/Model Context Protocol entegrasyonu değerlendirildi.
+
+  **WAVL MCP Server nedir:**
+  WAVL'ın Firestore event bus'ını (events_qrvee, events_pnot, events_minwin)
+  MCP protokolüyle dış AI istemcilerine açmak.
+  Claude, GPT, Cursor gibi herhangi bir MCP uyumlu AI,
+  WAVL verisine standart protokolle erişebilir.
+
+  **Ticari model (3 katman):**
+  - Free MCP: Temel callsign, band durumu (public)
+  - Pro MCP: Propagasyon geçmişi, operatör istatistikleri (Pro subscribers)
+  - Enterprise MCP: Ham data stream, Firestore read (araştırma/kurumsal)
+
+  **Veri satış potansiyeli:**
+  NOAA uzay hava verisi + WAVL operatör verisi = değerli propagasyon dataseti.
+  Hedef alıcılar: üniversiteler, meteoroloji kurumları, savunma araştırmacıları.
+
+  **Mimari hazırlık:**
+  LAW-005 (event bus zorunluluğu) MCP'ye doğal dönüşüm sağlar.
+  Ekstra iş minimal. Firebase Functions'dan MCP endpoint açmak yeterli.
+
+  **Landing page özellik:**
+  "WAVL MCP" — Pro/Elite özelliği olarak duyurulabilir.
+  Tagline: "Your AI speaks WAVL."
+
+- **STATUS:** PLAN — Kullanıcı tabanı oluştuktan sonra, FAZ-20+ hedef
+- **ÖN KOŞUL:** En az 500 aktif operatör. Veri değeri kullanıcı sayısına bağlı.
+

@@ -112,3 +112,10 @@ Codex, DALL-E API'ye erişebilir. Şu görevler için kullanılır:
 - Tall slender proportions
 - Levitating (no legs/feet visible)
 - Studio lighting, clean background
+
+
+## WAVL MCP — GELECEKTEKİ MİMARİ (FAZ-20+)
+
+Firestore event bus → MCP Server → Dış AI istemcileri
+LAW-005 uyumlu. Kullanıcı tabanı oluşunca aktif edilir.
+Şimdi mimari karar değil — sadece bilinç kaydı.
