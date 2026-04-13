@@ -140,7 +140,7 @@ Library → lab → city → other environments
 
 ---
 
-# QRVEE GAME VISION
+# WAVL GAME VISION
 
 RF / signal based interactive system
 

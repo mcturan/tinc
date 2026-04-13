@@ -23,7 +23,7 @@ mobile TS validation. All three build targets: zero errors.
 | Category | Count | From → To |
 |----------|-------|-----------|
 | Root package name | 1 | `qrv` → `qrvee` |
-| Functions package name | 1 | `qrv-functions` → `qrvee-functions` |
+| Functions package name | 1 | `qrv-functions` → `wavl-functions` |
 | Web package name | 1 | `@qrv/web` → `@qrvee/web` |
 | Mobile package name | 1 | `@qrv/mobile` → `@qrvee/mobile` |
 | `@qrv/shared` package name | 2 | packages/shared + vendor/shared-lib |
@@ -49,7 +49,7 @@ mobile TS validation. All three build targets: zero errors.
 - `package.json`: `"name": "qrv"` → `"qrvee"`
 - `apps/web/package.json`: `"name": "@qrv/web"` → `"@qrvee/web"`; dep `@qrv/shared` → `@qrvee/shared`
 - `apps/mobile/package.json`: `"name": "@qrv/mobile"` → `"@qrvee/mobile"`; dep → updated
-- `firebase/functions/package.json`: `"name": "qrv-functions"` → `"qrvee-functions"`; dep → updated
+- `firebase/functions/package.json`: `"name": "qrv-functions"` → `"wavl-functions"`; dep → updated
 - `packages/shared/package.json`: `"name": "@qrv/shared"` → `"@qrvee/shared"`
 - `firebase/functions/vendor/shared-lib/package.json`: `"name": "@qrv/shared"` → `"@qrvee/shared"`
 
