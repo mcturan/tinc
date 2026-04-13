@@ -683,3 +683,30 @@ Each entry must follow:
 - **STATUS:** PLAN — Kullanıcı tabanı oluştuktan sonra, FAZ-20+ hedef
 - **ÖN KOŞUL:** En az 500 aktif operatör. Veri değeri kullanıcı sayısına bağlı.
 
+
+---
+
+## CHANGE: Pipeline Agent Durum Tespiti
+
+- **TYPE:** CHANGE  
+- **DATE:** 2026-04-13
+- **DESCRIPTION:** Agent pipeline dürüst değerlendirmesi yapıldı.
+
+  Sorunlar:
+  - Stitch: LAW-017'de "tek tasarım kaynağı" tanımlı ama hiç kullanılmadı.
+    Gemini hem spec hem implement yaptı — ihlal.
+    Karar: Stitch şimdilik SUSPENDED. Gemini tek tasarım ajanı.
+    Stitch FAZ-14+ maskot çalışmasında değerlendirilecek.
+
+  - Ollama/Aider: Küçük düzeltmeler için tanımlı, hiç devreye girmedi.
+    Claude Code her şeyi yaptı. 
+    Karar: Ollama PASSIVE durumda kalıyor. Gerektiğinde aktif edilir.
+
+  - Codex exec: Sandbox kısıtı var. Alternatif: direkt python3.
+    Karar: Pipeline'da "Codex → python3 fallback" olarak güncellendi.
+
+  - FAZ sonu rapor: Claude Code sonuç dosyasını göstermiyordu.
+    ZORUNLU_BASLIK'a kural eklendi.
+
+- **STATUS:** COMPLETE
+

@@ -119,3 +119,14 @@ Codex, DALL-E API'ye erişebilir. Şu görevler için kullanılır:
 Firestore event bus → MCP Server → Dış AI istemcileri
 LAW-005 uyumlu. Kullanıcı tabanı oluşunca aktif edilir.
 Şimdi mimari karar değil — sadece bilinç kaydı.
+
+
+## FAZ SONU ZORUNLU RAPOR KURALI
+
+Her faz tamamlandığında Claude Code MUTLAKA şunu yapacak:
+
+1. Sonuç dosyasını yaz: /home/turan/İndirilenler/FAZ-XX_Results.md
+2. Terminale bas: cat /home/turan/İndirilenler/FAZ-XX_Results.md
+3. Müteahhit'e söyle: "FAZ-XX tamamlandı. Sonuç dosyası yukarıda."
+
+Bu yapılmadan faz tamamlanmış sayılmaz.
