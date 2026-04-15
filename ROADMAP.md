@@ -1,73 +1,81 @@
-# ROADMAP
+# WAVL + TINC PLATFORM YOL HARİTASI
+**Son güncelleme:** 2026-04-15
+
+## WAVL (QRVEE) — MEVCUT DURUM
+
+### ✅ Tamamlanan (FAZ-01 → FAZ-20)
+- Workspace + altyapı + 21 kanun
+- QRVEE → WAVL display rename
+- Landing page (canvas waterfall, orbital hero, dashboard mock, açık tema)
+- DALL-E görseller (13 adet, production'da)
+- Stripe webhook + checkout CF (Codex)
+- Firebase Auth + callsign doğrulama (Codex)
+- Dashboard CF'leri: getLiveOperators, getSpaceWeather, getDashboardData, setOperatorStatus
+- Onboarding page
+- Vercel deploy: qrvee.vercel.app ✅ CANLI
+
+### ⏳ WAVL Bekleyen (Beklemeye Alındı)
+| Görev | Öncelik | Not |
+|-------|---------|-----|
+| wavl.ee domain + DNS | Yüksek | Domain alınmadı |
+| Stripe price ID'leri | Yüksek | stripe.com'dan alınacak |
+| Firebase Functions deploy | Yüksek | cd firebase/functions && npm run deploy |
+| Vercel env: Stripe keys | Yüksek | Stripe dashboard sonrası |
+| Mapbox token | Orta | Harita için |
+| hamdb.org API test | Orta | curl ile test |
+| WAVLEE logo (harici) | Düşük | Müteahhit yaptıracak |
+| 3D WAVLEE maskot | Düşük | Platform oturduğunda |
+| PWA manifest | Düşük | |
+| RF + ANT oyunları | Düşük | FAZ-20+ |
+| PNOT UI | Düşük | CF'ler hazır |
+| MINWIN frontend | Düşük | MVP hazır |
 
 ---
 
-## CORE SYSTEM (IN PROGRESS)
+## OPS — SIRADAKI PLATFORM
 
-- [x] Foundation — spec system, LAW system, decision log
-- [x] Data model — WorkItem, ledger, event contracts
-- [x] Flow engine — buildFlowViewModel, FlowWidget, virtual list
-- [x] UI motion layer — framer-motion, system reactions, global pulse
-- [ ] Notification engine
-- [ ] Full audit pipeline
-- [ ] Load testing + production hardening
+### Karar (2026-04-15)
+OPS bağımsız çalışacak şekilde önce hızlıca bitirilecek.
+TINC entegrasyonu sonraya bırakıldı.
+FIRINNA-POS ile aynı yaklaşım.
 
----
+### OPS Hedefi
+Çift kayıt muhasebesi (LAW-001 uyumlu), case yönetimi,
+HomeAssistant benzeri modüler dashboard.
+WAVL dashboard'u base alınacak.
 
-## GAME LAYER (POST-CORE)
+### OPS Mevcut Durum
+- ✅ CalculationEngine (FAZ-06)
+- ✅ createCase + createTransfer CF
+- ✅ createParty, listParties, createAccount, getAccountBalance (FAZ-08B)
+- ✅ Minimal UI (port 3001)
+- ❌ Modüler dashboard
+- ❌ Tam UI
 
-The game layer is a phased, non-mandatory engagement system. It is built only after core system stability is confirmed.
-
-### Engagement Layer
-
-- Passive awareness of operator activity (via FlowViewModel)
-- XP events triggered only by real operator actions (no spam XP)
-- Opt-in activation — game layer is invisible unless enabled
-
-### Mascot System
-
-- Mascot reflects system state: idle / bored / engaged / excited / tired
-- State derived from FlowViewModel energy level (useFlowAwarenessStore)
-- Non-blocking, non-intrusive overlay
-- Reduced-motion safe
-
-### Hook Games
-
-- Short-form games: 10–60 seconds
-- Triggered during idle moments (low system energy)
-- Examples: antenna alignment, frequency tuning, signal decoding
-- No interference with active tasks
-
-### Intelligence Games
-
-- Long-form, simulation-based games
-- QRVEE: RF propagation simulation, real call sign data
-- PNOT: dependency chain solving, task scheduling puzzles
-- Require explicit user initiation
-
-### XP System Integration
-
-- XP earned from: completing WorkItems, chain completions, game events
-- XP visible in operator profile
-- No XP for passive activity
-- XP decay if system idle for extended period
-
-### Phased Rollout
-
-| Phase | Deliverable |
-|-------|-------------|
-| G-1 | Notification engine |
-| G-2 | Mascot engine (idle/engaged/excited states) |
-| G-3 | First hook game (signal tuning) |
-| G-4 | First intelligence game (RF simulation) |
-| G-5 | XP system + operator profile integration |
-| G-6 | Game ↔ system feedback loop complete |
+### OPS Yol Haritası (Sıradaki Fazlar)
+| Faz | Görev | Agent |
+|-----|-------|-------|
+| OPS-FAZ-01 | Boş modüler dashboard (HomeAssistant tarzı) | Gemini |
+| OPS-FAZ-02 | Widget'lar: Bakiye, Kasa, Son İşlemler | Codex |
+| OPS-FAZ-03 | Widget: Döviz kurları (canlı API) | Codex |
+| OPS-FAZ-04 | Widget: Komisyon hesaplayıcı | Codex |
+| OPS-FAZ-05 | FIRINNA-POS bağlantısı (opsiyonel) | Codex |
 
 ---
 
-## CONSTRAINTS
+## FIRINNA-POS
+- Bağımsız geliştirme — TINC entegrasyonu sonra
+- OPS bittikten sonra
 
-All game layer work is governed by:
-- LAW-015: Game system must remain non-intrusive and optional
-- GAME_SYSTEM_MASTER.md: Full game architecture spec
-- GAME_SYSTEM_INTENT.md: Design philosophy and anti-patterns
+---
+
+## PNOT / MINWIN
+- CF'ler hazır bekliyor
+- WAVL beklemeye alındığında başlanabilir
+
+---
+
+## TINC CORE
+- Event bus V2.3 stabil
+- 21 kanun, ZORUNLU_BASLIK güncel
+- MCP planı: FAZ-28+ (500+ operatör sonrası)

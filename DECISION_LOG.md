@@ -776,3 +776,24 @@ Each entry must follow:
 - **AGENT:** Codex (FAZ-18, FAZ-19A) + Gemini (FAZ-19B) + Claude Code (commit/rapor)
 - **STATUS:** COMPLETE — TypeScript sıfır hata, 3 commit push edildi
 
+
+
+---
+
+## DECISION: WAVL Beklemeye + OPS Geliştirme Başlangıcı
+
+- **TYPE:** DECISION
+- **DATE:** 2026-04-15
+- **DESCRIPTION:** WAVL geliştirilmesi beklemeye alındı.
+  Canli: qrvee.vercel.app
+  Bekleyen: wavl.ee DNS, Stripe price ID'leri, Firebase Functions deploy.
+  
+  Sıradaki: OPS bağımsız modüler dashboard.
+  WAVL dashboard'u (HomeAssistant tarzı) base alınacak.
+  TINC entegrasyonu sonraya bırakıldı — önce bağımsız çalışsın.
+  
+  FIRINNA-POS: OPS bittikten sonra, aynı yaklaşım.
+  
+- **STATUS:** ACTIVE
+- **NEXT:** OPS-FAZ-01 — Modüler dashboard
+
