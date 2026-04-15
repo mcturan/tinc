@@ -797,3 +797,20 @@ Each entry must follow:
 - **STATUS:** ACTIVE
 - **NEXT:** OPS-FAZ-01 — Modüler dashboard
 
+
+---
+
+## CHANGE: OPS-FAZ-01 — Proje Başlangıcı
+
+- **TYPE:** CHANGE
+- **DATE:** 2026-04-15
+- **DESCRIPTION:** OPS uygulaması başlatıldı. Bağımsız çalışacak.
+  Stack: Next.js 14 + Firebase (qrvee-project geçici).
+  Veri modeli: Company, User, Account, Party, Transaction, 
+  ExchangeRate, BillOfLading, Invoice tipleri tanımlandı.
+  Dashboard HTML (Gemini) — açık tema, HomeAssistant tarzı.
+  Konşimento tipleri: B/L, CMR, AWB, HBL.
+  Döviz: TCMB + exchangerate-api + manuel override.
+  BLOKE: Codex kota doldu — opsAuth, kasaFunctions, exchangeRates Apr 18'de yazılacak.
+- **STATUS:** PARTIAL — Codex Apr 18 bekliyor
+
