@@ -130,3 +130,27 @@ Her faz tamamlandığında Claude Code MUTLAKA şunu yapacak:
 3. Müteahhit'e söyle: "FAZ-XX tamamlandı. Sonuç dosyası yukarıda."
 
 Bu yapılmadan faz tamamlanmış sayılmaz.
+
+
+## AİDER KULLANIM KURALLARI
+
+Aider 0.86.2 kurulu. Ollama ile çalışır. Tamamen ücretsiz.
+
+Kullanım:
+  aider --model ollama/qwen2.5-coder:7b \
+        --no-git --yes-always \
+        --message "GÖREV" DOSYA_YOLU
+
+Aider ne yapar:
+- Mekanik TypeScript CF yazımı
+- Firebase Functions implementasyonu
+- Validation engine kodu
+- Büyük interface/type tanımları
+
+Aider ne YAPMAZ:
+- Tasarım kararı vermez
+- HTML/CSS yazmaz (Gemini)
+- Git commit atmaz (Claude Code)
+- Mimari karar vermez (Claude Pro)
+
+FALLBACK: Aider üretmezse → Codex. O da üretmezse → DUR, Claude Pro'ya bildir.
