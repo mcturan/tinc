@@ -831,3 +831,9 @@ Each entry must follow:
 - **STATUS:** COMPLETE
 - **NEXT:** OPS-FAZ-02 — Şirket yönetimi + Kasa UI + Cari Hesaplar UI
 
+
+---
+## CHANGE: OPS-FAZ-02 — 2026-04-16
+Gemini: sirket/kasalar/cariler/konsimento HTML (4 sayfa). Aider+Ollama qwen2.5-coder:7b: UCP600 validator.ts + cariFunctions.ts + konsimentoFunctions.ts.
+Claude Code: sadece git commit. Agent dağılımı LAW-017 uyumlu.
+NOT: Codex fallback denendi (CF'ler için) fakat Aider yeniden çalıştırıldığında başarılı oldu.
