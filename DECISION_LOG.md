@@ -814,3 +814,20 @@ Each entry must follow:
   BLOKE: Codex kota doldu — opsAuth, kasaFunctions, exchangeRates Apr 18'de yazılacak.
 - **STATUS:** PARTIAL — Codex Apr 18 bekliyor
 
+
+---
+
+## CHANGE: OPS-FAZ-01 Tamamlandı
+
+- **TYPE:** CHANGE
+- **DATE:** 2026-04-16
+- **DESCRIPTION:** OPS-FAZ-01 tüm görevler tamamlandı.
+  Auth CF'leri: createOpsUser, updateUserPermissions, onOpsUserCreate (beforeUserCreated).
+  Kasa CF'leri: createKasa, getKasalar, transferBetweenKasalar (atomic batch).
+  Kur CF'leri: fetchExchangeRates (TCMB XML + exchangerate-api yedek), getLatestRates, saveManualRate.
+  firestore.rules: CF-write-only, okuma companyId bazlı.
+  Dashboard HTML: 53KB, Gemini, açık tema, 6 widget, 2 modal.
+  TypeScript: sıfır hata.
+- **STATUS:** COMPLETE
+- **NEXT:** OPS-FAZ-02 — Şirket yönetimi + Kasa UI + Cari Hesaplar UI
+
