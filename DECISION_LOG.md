@@ -837,3 +837,9 @@ Each entry must follow:
 Gemini: sirket/kasalar/cariler/konsimento HTML (4 sayfa). Aider+Ollama qwen2.5-coder:7b: UCP600 validator.ts + cariFunctions.ts + konsimentoFunctions.ts.
 Claude Code: sadece git commit. Agent dağılımı LAW-017 uyumlu.
 NOT: Codex fallback denendi (CF'ler için) fakat Aider yeniden çalıştırıldığında başarılı oldu.
+
+---
+## CHANGE: OPS-FAZ-03 — 2026-04-16
+Gemini: islemler/faturalar/raporlar HTML + UX Audit raporu (OPS-UX-AUDIT.md).
+Aider+Ollama qwen2.5-coder:7b: telegramBot.ts, faturaFunctions.ts, index.ts.
+Claude Code: sadece git commit. 2 Aider process paralel çalışınca Ollama tıkandı — kill ile çözüldü.
