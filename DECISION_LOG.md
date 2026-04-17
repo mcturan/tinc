@@ -862,3 +862,12 @@ Next.js middleware (middleware.ts) — Python mekanik kopyalama ile yazıldı.
 tsconfig.json exclude: apps/, firebase/, functions/ eklendi (Vercel build fix).
 Vercel deploy başarılı: https://ops-swart-ten.vercel.app
 Garbage dirs (FILE 1: , FILE 2: ) — Aider prompt format hatası, temizlendi.
+
+---
+## CHANGE: OPS-FAZ-06 — 2026-04-17
+public/ sync: 10 HTML sayfa kopyalandı. types/ops.ts stub oluşturuldu.
+Stub dosyalar oluşturuldu: firebase-client.ts, auth-context.tsx, useDashboardData.ts, githubBackup.ts.
+BLOKE-A: Aider qwen2.5-coder:7b CPU modunda yeni dosya üretemiyor (8dk+, 0 byte çıktı). Mevcut dosyaları da düzenlemiyor — kök neden: Ollama CPU inference çok yavaş, model yanıt üretemiyor.
+BLOKE-B: Codex ChatGPT kullanım limiti doldu (18 Nisan 00:30'a kadar).
+KARAR: Sprint 2'ye ertelendi. Codex Plus veya Aider GPU ortamı gerekli.
+Smoke test: 9/9 sayfa 307 OK. dashboard.html 53736b korundu.
