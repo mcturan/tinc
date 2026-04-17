@@ -851,3 +851,14 @@ Aider(qwen2.5)=Next.js routing (page.tsx x9 + layout + globals),
 Aider(qwen2.5 fallback)=Telegram settings CF (qwen3.5:9b RAM yetersiz: 8.2GB gerekli/7.4GB mevcut),
 Ollama curl=CF audit (timeout — manuel analiz yapıldı), Claude Code=sadece git.
 KARAR: qwen3.5:9b bu sistemde çalışmıyor, gelecekte qwen2.5-coder:7b kullanılacak.
+
+---
+## CHANGE: OPS-FAZ-05 — 2026-04-17
+CF v1→v2 migration (Python fallback — Aider yeni dosya yaratmakta tekrar tekrar takıldı).
+Firebase Functions deploy — firebase CLI kurulumu gerekti (npm install -g firebase-tools).
+Firebase login eksik — kullanıcı manuel `firebase login` çalıştırmalı.
+Auth login sayfası (login.html) — Aider başarısız, Gemini ile üretildi (HTML agent fallback).
+Next.js middleware (middleware.ts) — Python mekanik kopyalama ile yazıldı.
+tsconfig.json exclude: apps/, firebase/, functions/ eklendi (Vercel build fix).
+Vercel deploy başarılı: https://ops-swart-ten.vercel.app
+Garbage dirs (FILE 1: , FILE 2: ) — Aider prompt format hatası, temizlendi.
