@@ -871,3 +871,17 @@ BLOKE-A: Aider qwen2.5-coder:7b CPU modunda yeni dosya üretemiyor (8dk+, 0 byte
 BLOKE-B: Codex ChatGPT kullanım limiti doldu (18 Nisan 00:30'a kadar).
 KARAR: Sprint 2'ye ertelendi. Codex Plus veya Aider GPU ortamı gerekli.
 Smoke test: 9/9 sayfa 307 OK. dashboard.html 53736b korundu.
+
+---
+## CHANGE: OPS Sprint 2 — 2026-04-18
+CF birleştirme: functions/src/ → firebase/functions/src/ (5 modül taşındı).
+TypeScript hataları düzeltildi (v2 API, HttpsError import, request.data).
+14 yeni Firebase Function deploy edildi: updateParty, getPartyStatement,
+createInvoice, approveInvoice, recordPayment, listInvoices, getInvoice,
+createBillOfLading, approveBillOfLading, listBillsOfLading, getBillOfLading,
+saveTelegramConfig, testTelegramConnection, getTelegramConfig.
+Toplam aktif CF: 29 (us-central1).
+firebase-client.ts: europe-west1 → us-central1 region fix + isim hizalama.
+AuthProvider layout.tsx'e eklendi.
+useDashboardData.ts callGetAccountBalance ile hizalandı.
+Vercel redeploy: ops-swart-ten.vercel.app
