@@ -893,3 +893,11 @@ cariler.html ve ayarlar.html Gemini tam dosya döndüremedi — script-only fall
 githubBackup.ts: 229 satır (dailyFirestoreBackupScheduled, dailyFirestoreBackup, restoreFromBackup, saveGithubConfig, getBackupLogs).
 Firebase: 5 yeni CF deploy (34 toplam aktif, us-central1, ops-financial-prod).
 OPS v1.0 hazır. URL: ops-swart-ten.vercel.app
+
+---
+## CHANGE: OPS Sprint 4 — 2026-04-18
+GÜVENLİK: Middleware jose JWT doğrulama (Edge Runtime). listBillsOfLading/getBillOfLading auth eklendi.
+restoreFromBackup/saveGithubConfig master_admin zorunlu. companyId tenant izolasyon patch (fatura+cari CF).
+EKSİK SAYFALAR: faturalar+personel+raporlar Firebase CF bağlantısı tamamlandı.
+DEPLOY: Firebase CF (onOpsUserCreate hariç tümü OK). Vercel prod: ops-swart-ten.vercel.app.
+TS hatası: 0. dashboard.html: 53829 byte — korundu.
