@@ -885,3 +885,11 @@ firebase-client.ts: europe-west1 → us-central1 region fix + isim hizalama.
 AuthProvider layout.tsx'e eklendi.
 useDashboardData.ts callGetAccountBalance ile hizalandı.
 Vercel redeploy: ops-swart-ten.vercel.app
+
+---
+## CHANGE: OPS Sprint 3 FINAL — 2026-04-18
+kasalar/islemler/cariler/konsimento/ayarlar HTML → Firebase CF bağlantısı (Gemini vanilla JS).
+cariler.html ve ayarlar.html Gemini tam dosya döndüremedi — script-only fallback (Gemini script üretir, Python ekler).
+githubBackup.ts: 229 satır (dailyFirestoreBackupScheduled, dailyFirestoreBackup, restoreFromBackup, saveGithubConfig, getBackupLogs).
+Firebase: 5 yeni CF deploy (34 toplam aktif, us-central1, ops-financial-prod).
+OPS v1.0 hazır. URL: ops-swart-ten.vercel.app
