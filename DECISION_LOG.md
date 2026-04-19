@@ -925,3 +925,7 @@ UX: empty state 7 sayfaya eklendi (Python inject). Print CSS 5 sayfaya eklendi (
 VERİ BAĞLANTISI: konsimento → cari dropdown (Gemini). BL'den fatura üret butonu (Gemini).
 OPS v1.3 — navigasyon tutarlı, CRUD tamamlandı.
 2026-04-19 20:58: OPS Sprint8 — Mobile+PDF+AuditLog+Realtime. Ollama RAM yetersiz→Python stub. auditlog.html Gemini 698B döndürdü→Python stub 20KB.
+
+---
+## OPS Sprint9 — 2026-04-20
+Node 20→22. auditlog.html korundu (Gemini 1900B→restore). getAuditLogs CF Gemini 83 satır. deepseek RAM yetersiz. onOpsUserCreate GCIP Node22 ile skip edildi.
