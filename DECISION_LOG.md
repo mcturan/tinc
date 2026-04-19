@@ -901,3 +901,17 @@ restoreFromBackup/saveGithubConfig master_admin zorunlu. companyId tenant izolas
 EKSİK SAYFALAR: faturalar+personel+raporlar Firebase CF bağlantısı tamamlandı.
 DEPLOY: Firebase CF (onOpsUserCreate hariç tümü OK). Vercel prod: ops-swart-ten.vercel.app.
 TS hatası: 0. dashboard.html: 53829 byte — korundu.
+
+---
+## CHANGE: OPS Sprint 5+6 FINAL — 2026-04-19
+TAM TAKIM: Gemini(dashboard+sirket), Python(claim+GCIP), Codex/Gemini(PDF CF),
+GitHub Copilot(print CSS—timeout, Python fallback), Ollama/Aider(UCP600—timeout 600s),
+Claude Code(deploy+git+tsconfig fix).
+Dashboard: Firebase gerçek veri (kasalar, son işlemler, kurlar, BL sayısı, aylık gelir/gider).
+Şirket: ops_companies CRUD + ops_users listesi.
+PDF CF: generateBillOfLadingPDF + generateInvoicePDF (Gemini, 303 satır).
+Claim fix: !token.master_admin → role !== 'master_admin' (konsimento+fatura CF).
+Print CSS: faturalar, konsimento, raporlar.
+Vercel: ops-swart-ten.vercel.app ✅.
+BEKLEYEN: F (UCP600 konsimento) — Aider Ollama 600s timeout, Müteahhit kararı gerekiyor.
+OPS v1.2 — 10/10 sayfa Firebase bağlı.
