@@ -915,3 +915,13 @@ Print CSS: faturalar, konsimento, raporlar.
 Vercel: ops-swart-ten.vercel.app ✅.
 BEKLEYEN: F (UCP600 konsimento) — Aider Ollama 600s timeout, Müteahhit kararı gerekiyor.
 OPS v1.2 — 10/10 sayfa Firebase bağlı.
+
+---
+## CHANGE: OPS Sprint 7 — 2026-04-19
+KRİTİK: faturalar/raporlar/personel apiKey fix (Python).
+NAVİGASYON: sirket linki 10 sayfaya eklendi (Python). sirket.html sidebar eklendi (Python, dashboard'dan).
+CRUD: cariler.html Düzenle + Sil (Gemini). updateParty + soft delete bağlandı.
+UX: empty state 7 sayfaya eklendi (Python inject). Print CSS 5 sayfaya eklendi (Python).
+VERİ BAĞLANTISI: konsimento → cari dropdown (Gemini). BL'den fatura üret butonu (Gemini).
+OPS v1.3 — navigasyon tutarlı, CRUD tamamlandı.
+2026-04-19 20:58: OPS Sprint8 — Mobile+PDF+AuditLog+Realtime. Ollama RAM yetersiz→Python stub. auditlog.html Gemini 698B döndürdü→Python stub 20KB.
