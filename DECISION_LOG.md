@@ -929,3 +929,7 @@ OPS v1.3 — navigasyon tutarlı, CRUD tamamlandı.
 ---
 ## OPS Sprint9 — 2026-04-20
 Node 20→22. auditlog.html korundu (Gemini 1900B→restore). getAuditLogs CF Gemini 83 satır. deepseek RAM yetersiz. onOpsUserCreate GCIP Node22 ile skip edildi.
+
+---
+## OPS Sprint10 — 2026-04-20
+writeAuditLog: konsimento+fatura+cari CF. PDF test UI (Gemini 784B script). /sirket 404→page.tsx eklendi. onOpsUserCreate GCIP: export kaldırıldı, kalıcı çözüm Sprint11+. E2E: 12/12. OPS v1.6.
