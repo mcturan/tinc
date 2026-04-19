@@ -933,3 +933,7 @@ Node 20→22. auditlog.html korundu (Gemini 1900B→restore). getAuditLogs CF Ge
 ---
 ## OPS Sprint10 — 2026-04-20
 writeAuditLog: konsimento+fatura+cari CF. PDF test UI (Gemini 784B script). /sirket 404→page.tsx eklendi. onOpsUserCreate GCIP: export kaldırıldı, kalıcı çözüm Sprint11+. E2E: 12/12. OPS v1.6.
+
+---
+## OPS Sprint11 — 2026-04-20
+signOut 11 sayfaya. Ctrl+K hizli arama (Gemini 2.2KB). Bildirim merkezi 5 sayfaya. Kur bandi 11 sayfaya. POST-AUDIT 11/11. OPS v1.7.
